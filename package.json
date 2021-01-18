@@ -1,0 +1,45 @@
+{
+  "name": "unit-testing-of-calculator",
+  "version": "1.0.0",
+  "description": "unit test of the Calculator app\r # Installation\r ```\r npm install\r ```",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --config ./test/config/mocha.config.js",
+    "coverage": "nyc npm run test"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "app/**/*.js"
+    ],
+    "excludes": [
+      "**/*.spec.js"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penfriend/unit-testing.git"
+  },
+  "keywords": [
+    "unit-testing"
+  ],
+  "author": "Diana Holik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/penfriend/unit-testing/issues"
+  },
+  "homepage": "https://github.com/penfriend/unit-testing#readme",
+  "devDependencies": {
+    "mochawesome": "^6.2.1",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
+  }
+}
